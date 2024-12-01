@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>คำนวณค่าตั๋วรถไฟ</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 350px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 1.5em;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .result {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 1.2em;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>คำนวณค่าตั๋วรถไฟ</h1>
+
+  <div class="form-group">
+    <label for="distance">ระยะทาง (กิโลเมตร):</label>
+    <input type="number" id="distance" placeholder="กรอกระยะทาง">
+  </div>
+
+  <div class="form-group">
+    <label for="ticketType">ประเภทตั๋ว:</label>
+    <select id="ticketType">
+      <option value="1">ชั้นประหยัด (1 บาท/กม.)</option>
+      <option value="1.5">ชั้นธุรกิจ (1.5 บาท/กม.)</option>
+      <option value="2">ชั้นหนึ่ง (2 บาท/กม.)</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="passengers">จำนวนผู้โดยสาร:</label>
+    <input type="number" id="passengers" placeholder="กรอกจำนวนผู้โดยสาร">
+  </div>
+
+  <button onclick="calculateTicket()">คำนวณราคาตั๋ว</button>
+
+  <div class="result" id="result"></div>
+</div>
+
+</body>
+</html>
